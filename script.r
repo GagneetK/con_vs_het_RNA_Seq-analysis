@@ -1,7 +1,7 @@
-fly = read.csv("/Users/gagneetkaur/Desktop/final_project/modified.txt",header =T, sep = "\t", row.names = 1)
+fly = read.csv("/Users/modified.txt",header =T, sep = "\t", row.names = 1)
 head(fly)
 
-orthologs=read.csv("/Users/gagneetkaur/Downloads/dmel-orthologs-in-drosophila-species-fb-2021-02 2.tsv", header=T, sep="\t")
+orthologs=read.csv("/Users/dmel-orthologs-in-drosophila-species-fb-2021-02 2.tsv", header=T, sep="\t")
 orthosearch=function(x){orthologs[orthologs$Ortholog_FBgn_ID==x,1]}
 orthosearchsingle=function(x){orthosearch(x)[1]}
 head(orthologs)
